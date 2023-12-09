@@ -104,7 +104,7 @@ if __name__ == '__main__':
     main()
 ```
 
-### Package configuration
+## Package configuration and build process
 
 According to the documentation of [ROS2](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html), the following steps are necessary to build our own package:
 
