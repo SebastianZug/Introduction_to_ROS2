@@ -7,6 +7,8 @@ comment: Interactive LiaScript workshop at Federal University of Amazonas
 
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/Introduction_to_ROS2/main/Tutorial_pythonNode.md)
+
 # Python ROS2 Nodes
 
 **Packages** - Packages encapsulate individual algorithms and realise their dependencies. Ultimately, this ensures the reusability of an implementation.

@@ -7,6 +7,8 @@ comment: Interactive LiaScript workshop at Federal University of Amazonas
 
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/Introduction_to_ROS2/main/ROS2_concepts.md)
+
 # ROS Concepts
 
 Let us assume that we would like to participate in next years [RoboCup](https://atwork.robocup.org/).

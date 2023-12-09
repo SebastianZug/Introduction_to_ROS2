@@ -7,7 +7,7 @@ comment: Interactive LiaScript workshop at Federal University of Amazonas
 
 -->
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/LiaPlayground/Brasil_2023/blob/master/README.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/Introduction_to_ROS2/main/README.md)
 
 # LiaScript Tutorial
 
@@ -17,13 +17,13 @@ __9th December 2023__
 
 <div style="width: 55%; float: left">
 
-| Time    | Topic                                                         |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:20 | Repetition [Implementation of Remote-Labs integrated in LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Brasil_2023/main/remote_labs.md#1)         |
-| 10:20 - 11:20 | [Basics of ROS]() |
-| 11:20 - 11:35 | _Short break_                                                       |
-| 11:35 - 12:15 | [Practical ](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Brasil_2023/main/best_practice.md#1)    |
-| 11:00 - 12:00 | |
+| Time          | Topic                                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 10:00 - 10:10 | Live Demo - Implementation of Remote-Labs integrated in LiaScript                                                                                            |
+| 10:10 - 11:30 | [Basics of ROS](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/Introduction_to_ROS2/main/ROS2_concepts.md)               |
+| 11:30 - 11:45 | _Short break_                                                                                                                                                |
+| 11:45 - 12:30 | [Writing our own node ](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/Introduction_to_ROS2/main/Tutorial_pythonNode.md) |
+| 12:30 - 13:00 | [Turtlebot Demonstration](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/Introduction_to_ROS2/main/Turtlebot_demo.md)    |
 
 </div>
 
@@ -33,19 +33,15 @@ __9th December 2023__
 
 > All materials of this course are available on Github:
 >
-> https://github.com/LiaPlayground/Brasil_2023
->
-> Open the tutorial part in the LiaScript Live Editor directly:
->
-> [Tutorial in Live Editor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/Brasil_2023/main/basics_of_liascript.md)
+> https://github.com/SebastianZug/Introduction_to_ROS2
 
 </div>
 
 ## Presenters
 
-| Name        |       eMail       |       Twitter         |
-| ----------------------- |:---------------------------------------:|:-----------------------------------------------------:|
-| Prof. Dr. Sebastian Zug | [sebastian.zug\@informatik.tu-freiberg.de](https://raw.githubusercontent.com/LiaPlayground/OEB-2023/main/mailto:sebastian.zug@informatik.tu-freiberg.de) |  |
+| Name        |       eMail       |
+| ----------------------- |:---------------------------------------:|
+| Prof. Dr. Sebastian Zug | [sebastian.zug\@informatik.tu-freiberg.de](https://raw.githubusercontent.com/LiaPlayground/OEB-2023/main/mailto:sebastian.zug@informatik.tu-freiberg.de) | 
 
 
 + Prof. for Software development and Robotics at Technische Universität Freiberg since 2018
@@ -61,6 +57,8 @@ _Impressions of project __RobotTraces__ implemented by Hochschule Schmalkalden a
 ## ROS2 Installation process
 
 > Let's run the installation process in parallel to the presentation. You can find the installation instructions in the [ROS2 documentation](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html).
+
+You will need to add the ROS 2 apt repository to your system. Afterwards you are able to run:
 
 ```
 sudo apt install ros-humble-desktop

@@ -7,6 +7,8 @@ comment: Interactive LiaScript workshop at Federal University of Amazonas
 
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/Introduction_to_ROS2/main/Turtlebot_demo.md)
+
 # Turtlebot Demonstration
 
 ![Turtlebot](images/turtlebot.jpeg)
