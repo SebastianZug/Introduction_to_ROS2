@@ -41,10 +41,10 @@ Let us assume that we would like to participate in next years [RoboCup](https://
 
 1. Hardware support and runtime environment
 
-  + **Operating system** A robotics development environment should offer multiple operating systems and the widest possible coverage for frequently used libraries, components or hardware drivers.
-  + **Support for resource-limited systems** Interaction and co-operation with resource-limited systems is required in areas where, for example, the efficiency and costs of the components used play a key role. Appropriate support for such systems is desirable for a wide range of applications of the respective framework.
-  + **Real-time capability** Robotics applications often include application elements that place strict real-time requirements on processing. Control loops for controlling manipulators require deterministic time behaviour in order to run stably.
-  + **Driver integration** A framework should not only support a variety of sensors and actuators, but also concrete robot systems from specific manufacturers that are based on these components.
+   + **Operating system** A robotics development environment should offer multiple operating systems and the widest possible coverage for frequently used libraries, components or hardware drivers.
+   + **Support for resource-limited systems** Interaction and co-operation with resource-limited systems is required in areas where, for example, the efficiency and costs of the components used play a key role. Appropriate support for such systems is desirable for a wide range of applications of the respective framework.
+   + **Real-time capability** Robotics applications often include application elements that place strict real-time requirements on processing. Control loops for controlling manipulators require deterministic time behaviour in order to run stably.
+   + **Driver integration** A framework should not only support a variety of sensors and actuators, but also concrete robot systems from specific manufacturers that are based on these components.
 
 *********************************************
 
@@ -53,9 +53,9 @@ Let us assume that we would like to participate in next years [RoboCup](https://
 
 2. Communication
 
-  + **Communication middleware** Appropriate mechanisms are required so that applications can run distributed across several computer nodes and thus ensure location independence.
-  + **Communication paradigms** In the context of an application, it is desirable to cover different forms of message exchange between the components. The *client-server relationship* and the *publish-subscribe model* are conceivable interaction patterns.
-  + **Real-time capability** Following on from the real-time capability of the runtime environment, the deterministic behaviour of the communication connections is a prerequisite for the development of time-critical systems.
+   + **Communication middleware** Appropriate mechanisms are required so that applications can run distributed across several computer nodes and thus ensure location independence.
+   + **Communication paradigms** In the context of an application, it is desirable to cover different forms of message exchange between the components. The *client-server relationship* and the *publish-subscribe model* are conceivable interaction patterns.
+   + **Real-time capability** Following on from the real-time capability of the runtime environment, the deterministic behaviour of the communication connections is a prerequisite for the development of time-critical systems.
 
 *********************************************
 
@@ -64,10 +64,10 @@ Let us assume that we would like to participate in next years [RoboCup](https://
 
 3. Programming
 
-  + **Supported programming languages** When developing applications, the developer should be given the choice of which programming language to use. A domain-specific question is aimed at the possibility of graphical programming.
-  + **Support libraries** Predefined components, e.g. for path planning, behaviour selection and localisation, facilitate the development process and promote the reuse of software modules, although appropriate adaptations may be necessary.
-  + **Expandability** Expandability here means support for adding new software modules and new hardware components to the existing framework.
-  + **Licence model** The type of license for the framework determines its general applicability, particularly in the case of commercial use. The selected license model at least partly determines the breadth of the development community. An active community facilitates development work and offers a variety of answers, suggestions and sample code in wikis or forums.
+   + **Supported programming languages** When developing applications, the developer should be given the choice of which programming language to use. A domain-specific question is aimed at the possibility of graphical programming.
+   + **Support libraries** Predefined components, e.g. for path planning, behaviour selection and localisation, facilitate the development process and promote the reuse of software modules, although appropriate adaptations may be necessary.
+   + **Expandability** Expandability here means support for adding new software modules and new hardware components to the existing framework.
+   + **Licence model** The type of license for the framework determines its general applicability, particularly in the case of commercial use. The selected license model at least partly determines the breadth of the development community. An active community facilitates development work and offers a variety of answers, suggestions and sample code in wikis or forums.
 
 *********************************************
 
@@ -76,9 +76,9 @@ Let us assume that we would like to participate in next years [RoboCup](https://
 
 4. Testing and debugging
 
-  + **Monitoring** It must be possible to monitor the individual components and their relationships to each other in a comprehensive approach in order to make convenient statements about the status of the robot system. A graphical interface that visualises individual components, the overall system or individual parameters simplifies development considerably.
-  + **Logging** The logging of the application operation supports debugging on the one hand and enables this application execution to be repeated in the sense of replaying a recording on the other. This makes it possible to analyse the implemented functionalities offline so that statements can also be made about the performance of these or the overall system.
-  + **Simulation** The simulation of the real world enables developers to test their applications without having to own the corresponding hardware by modelling it appropriately. The simulators can take the form of "simple" two-dimensional or complex 3D realisations with realistic physical conditions.
+   + **Monitoring** It must be possible to monitor the individual components and their relationships to each other in a comprehensive approach in order to make convenient statements about the status of the robot system. A graphical interface that visualises individual components, the overall system or individual parameters simplifies development considerably.
+   + **Logging** The logging of the application operation supports debugging on the one hand and enables this application execution to be repeated in the sense of replaying a recording on the other. This makes it possible to analyse the implemented functionalities offline so that statements can also be made about the performance of these or the overall system.
+   + **Simulation** The simulation of the real world enables developers to test their applications without having to own the corresponding hardware by modelling it appropriately. The simulators can take the form of "simple" two-dimensional or complex 3D realisations with realistic physical conditions.
 
 *********************************************
 
@@ -257,17 +257,17 @@ Which topics are available in our applications?
 > ros2 topic hz /turtle1/pose
 ```
 
-Probably the ros2 topic command is not suitable to inspect the system. Let us try the rqt_graph tool.
+Probably the ros2 topic command is not suitable to inspect a complex system. Let us try the rqt_graph tool.
 
 ```
 > rqt_graph
-``
+```
 
 > What happens if you additionally call `ros2 topic echo /turtle1/cmd_vel` with the graph?
 
 ```
 > ros2 topic info /turtle1/cmd_vel
-``
+```
 
 > Explain the output of the command.
 
@@ -288,17 +288,13 @@ Probably the ros2 topic command is not suitable to inspect the system. Let us tr
 
 Obviously, we have 2 3x1 vectors for linear and angular velocity.
 
-2. How to send a message from commandline?
-
-```
-ros2 topic pub <topic_name> <msg_type> '<args>'
-```
+2. How to send a message from commandline? The general pattern is `ros2 topic pub <topic_name> <msg_type> '<args>'`.
 
 ```
 ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
 ```
 
-> How can we "rerun" the command? Investigate the documentation for this question. Use ChatGPT for this purpose.
+> How can we "rerun" this command? Investigate the documentation for this question. Use ChatGPT for this purpose.
 
 ## Exercises
 
@@ -308,7 +304,7 @@ ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0
 > ros2 interface show sensor_msgs/msg/LaserScan
 ```
 
-> Which fields are contained in this message type?
+> Which fields are contained in this message type? What is the purpose of the header?
 
 > __Exercise 2__: Use ros bag to record the messages of the turtle simulation. 
 
